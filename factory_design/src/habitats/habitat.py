@@ -5,7 +5,8 @@ from src.animals import Animal
 
 class Habitat(ABC):
 
-    animals: Dict[str, List[Animal]] = dict()
+    def __init__(self):
+        self.animals: Dict[str, List[Animal]] = dict()
 
     @abstractmethod
     def add_animal(self, animal: Animal) -> None:
